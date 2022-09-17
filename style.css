@@ -4,9 +4,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .2fr 2fr .2fr;
 }
-
+/* ----------------------------------- */
 .header {
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     left: 0;
     right: 0;
@@ -20,12 +20,17 @@ ul {
     justify-content: space-evenly;
 }
 
+#highlight {
+    font-weight: 900;
+}
+
 #dropdown {
     display: none;
     position: absolute;
-    background-color: yellow
+        background-color: rgb(255, 255, 255)
 }
 
+/* ---------------------------- */
 .main-content {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
@@ -62,7 +67,10 @@ ul {
     transition: all 0.5s;
 }
 
-
+a {
+    text-decoration: none;
+    color: black
+}
 
 .slide img {
     width: 100px;
