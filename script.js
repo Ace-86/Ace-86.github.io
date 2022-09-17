@@ -8,7 +8,7 @@ const nextSlide = document.querySelector('.next');
 const prevSlide = document.querySelector('.previous')
 let currSlide = 0;
 let lastSlide = slides.length - 1;
-
+let count = 0;
 // ----------------------------
 
 // ---------------carousel functions-----------
@@ -29,14 +29,22 @@ slides.forEach((slide,indx) => {
 
 
 // -------drop-down events-----------
-menuItem.addEventListener('mouseover', e => {
-        dropDown.style.display = 'block'; 
-        console.log('click')
+menuItem.addEventListener('click', e => {
+        if (count === 0) {
+        dropDown.style.display = 'block';
+        count++;
+        console.log('add')
+        } else {
+                dropDown.style.display = 'none';
+                count--;
+        console.log('minus')
+
+        }
 })
 
-menuItem.addEventListener('mouseout', e => {
-        dropDown.style.display = 'none';
-})
+// menuItem.addEventListener('', e => {
+//         dropDown.style.display = 'none';
+// })
 
 // --------------carousel events--------------
 nextSlide.addEventListener('click', slideNext)
@@ -52,7 +60,7 @@ prevSlide.addEventListener('click', function() {
         });
 })       
 
-// ---------carousel auto function--------
+// ---------carousel auto timer function--------
 window.onload = function () {      
         setInterval(slideNext, 7000);
 };
