@@ -25,7 +25,7 @@ body {
     background-color: maroon;
 }
 
-ul {
+.header-list {
     display: flex;
     justify-content: space-evenly;
 }
@@ -63,8 +63,11 @@ ul {
     font-size: 20px;
 }
 
-/* -------------------------------- */
-
+/* ---------------contact form----------------- */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
 
 /* -------------------------------------- */
 
