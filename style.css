@@ -4,7 +4,17 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .2fr 2fr .2fr;
 }
-/* ----------------------------------- */
+
+#border {
+    border: 2px red dotted;
+}
+
+#border2 {
+    border: 5px green solid
+}
+
+
+/* --------------------header/menu--------------- */
 .header {
     /* position: sticky; */
     top: 0;
@@ -30,25 +40,33 @@ ul {
         background-color: rgb(255, 255, 255)
 }
 
-/* ---------------------------- */
+/* ---------------links/text-content ------------- */
+
 .main-content {
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr;
     grid-column: 1 / 4;
     grid-row: 2 / 3;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    grid-column: 1 / 4;
-    grid-row:  3 / 4;
-    background-color: maroon;
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box-display {
+    margin: 10px;
+    background-color: grey;
+    width: 500px;
+    height: auto;
+    font-size: 20px;
 }
 
-#border {
-    border: 2px red dotted;
-}
+/* -------------------------------- */
+
+
+/* -------------------------------------- */
 
 .slider-links {
     /* display: flex;
@@ -100,4 +118,16 @@ a {
 .next {
     top: 45%;
     right: 2%;
+}
+
+/* ------------------------------------- */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    grid-column: 1 / 4;
+    grid-row:  3 / 4;
+    background-color: maroon;
 }
