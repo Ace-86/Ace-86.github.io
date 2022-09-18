@@ -14,7 +14,7 @@
             <!-- border section -->
             <div class="header" id="border"> 
                     
-                    <ul>
+                    <ul class="header-list">
                         <a href="index.html" target="_self">Home</a>
                         <a href="about.html" target="_self">About</a>
 
@@ -38,23 +38,31 @@
 
 <!-- content section -->
             <div class="main-content" id="border">
-                <div class="slider-links" id="border"> 
-                    <div class="slide">
-                        <img src="./assets/github.png" alt="github">
+                <div class="side-panel"></div>
+                
+                <div class="display-container" id="border2">
+                    <div class="form-container">
+                    
+                        <form action="/script.js"  method="post">
+                        <ul>
+                          <li>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name" />
+                          </li>
+                          <li>
+                            <label for="mail">E-mail:</label>
+                            <input type="email" id="mail" name="user_email" />
+                          </li>
+                          <li>
+                            <label for="msg">Message:</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                          </li>
+                        </ul>
+                      </form>
+                    
                     </div>
-                    <div class="slide">
-                        <img src="./assets/twitter.png" alt="twitter">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/linkedIn.png" alt="linkedIn">
-                    </div>
-                    <div class="slide">
-                        <img src="./assets/reddit.png" alt="reddit">
-                    </div> 
-                    <button class="previous" id="btn"> < </button>
-                    <button class="next" id="btn"> > </button> 
-                </div>
 
+                </div>
                 
             </div>
 
