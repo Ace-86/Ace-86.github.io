@@ -49,6 +49,13 @@ body {
     grid-row: 2 / 3;
 }
 
+#dot {
+    border-radius: 100%;
+    background-color: grey;
+    width: 10px;
+    height:10px;
+}
+
 .text-container {
     display: flex;
     flex-direction: column;
