@@ -1,6 +1,7 @@
 // create drop down menu
 const menuItem = document.querySelector('.project')
 const dropDown = document.querySelector('#dropdown')
+const $formName = document.querySelector('#name')
 
 // carousel
 const slides = document.querySelectorAll('.slide');
@@ -64,3 +65,19 @@ prevSlide.addEventListener('click', function() {
 window.onload = function () {      
         setInterval(slideNext, 7000);
 };
+
+// ---------------------form----------------------
+$formName.addEventListener('input', () => {
+        $formName.setCustomValidity('');
+        $formName.checkValidity();
+});
+
+$formName.addEventListener('invalid', () =>{
+        if ($formName.value === '') {
+                $formName.setCustomValidity('Enter your Name!')
+        } else {
+                $formName.setCustomValidity(
+                        'Usernames can only be lowercase.'
+                )
+        }
+})
