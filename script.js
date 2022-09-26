@@ -1,6 +1,7 @@
 // create drop down menu
 const menuItem = document.querySelector('.project')
 const dropDown = document.querySelector('#dropdown')
+
 const $formName = document.querySelector('#name')
 
 // carousel
@@ -70,14 +71,15 @@ window.onload = function () {
 $formName.addEventListener('input', () => {
         $formName.setCustomValidity('');
         $formName.checkValidity();
-});
-
-$formName.addEventListener('invalid', () =>{
+    });
+    
+    $formName.addEventListener('invalid', () =>{
         if ($formName.value === '') {
                 $formName.setCustomValidity('Enter your Name!')
         } else {
                 $formName.setCustomValidity(
-                        'Usernames can only be lowercase.'
+                        'Names can only be letters.'
                 )
         }
-})
+    })
+    
