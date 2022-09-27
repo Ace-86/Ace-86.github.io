@@ -2,6 +2,7 @@
 const menuItem = document.querySelector('.project')
 const dropDown = document.querySelector('#dropdown')
 
+const $userEmail = document.querySelector('#user_mail')
 const $formName = document.querySelector('#name')
 
 // carousel
@@ -79,6 +80,21 @@ $formName.addEventListener('input', () => {
         } else {
                 $formName.setCustomValidity(
                         'Names can only be letters.'
+                )
+        }
+    })
+    
+    $userEmail.addEventListener('input', () => {
+        $userEmail.setCustomValidity('');
+        $userEmail.checkValidity();
+    });
+    
+    $userEmail.addEventListener('invalid', () =>{
+        if ($userEmail.value === '') {
+                $userEmail.setCustomValidity('Enter your email!')
+        } else {
+                $userEmail.setCustomValidity(
+                        'make sure to include @'
                 )
         }
     })
