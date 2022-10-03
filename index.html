@@ -65,13 +65,15 @@
                 <img src="#" id="giffy">
                 <script>
                     const img = document.querySelector('#giffy');
-                    fetch('https://api.giphy.com/v1/gifs/translate?api_key=S5KINIDioRikXaTlo9tXxkSi4aBEpzWo&s=hacker', {mode: 'cors'})
-                    .then(function(response) {
-                        return response.json();
-                    })
-                    .then(function(response) {
-                        img.src = response.data.images.original.url;
-                    });
+                    
+                    async function getgiffy() {
+                    const response = await fetch('https://api.giphy.com/v1/gifs/translate?api_key=S5KINIDioRikXaTlo9tXxkSi4aBEpzWo&s=welcome', {mode: 'cors'})
+                    const gifData = await response.json();
+                        img.src = gifData.data.images.original.url;
+                        console.log(response)
+                        console.log(gifData)
+                }
+                getgiffy();
                 </script>
                 
             </div>
